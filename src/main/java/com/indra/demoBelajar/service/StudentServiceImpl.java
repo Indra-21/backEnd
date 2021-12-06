@@ -2,6 +2,8 @@ package com.indra.demoBelajar.service;
 
 import java.util.List;
 
+// import javax.persistence.Id;
+
 import com.indra.demoBelajar.model.StudentModel;
 
 import com.indra.demoBelajar.repository.StudentRepository;
@@ -24,6 +26,19 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentModel> getAllStudentsModels() {
         return studentRepository.findAll();
     }
+
+    @Override
+    public void hapusStudentModel(StudentModel studentModel) {
+        studentRepository.delete(studentModel);
+        
+    }
+
+    // @Override
+    // public void hapusStudentModel(StudentModel studentModel) {
+    //     studentRepository.delete(studentModel);
+    // }
+
+
     
 
 }
