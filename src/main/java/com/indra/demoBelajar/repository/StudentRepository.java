@@ -11,4 +11,6 @@ public interface StudentRepository extends JpaRepository<StudentModel, Integer> 
 
     @Query("SELECT S FROM StudentModel S WHERE id=?1")
     StudentModel cariid(Integer id);
+    
+//    ini leny
 }
